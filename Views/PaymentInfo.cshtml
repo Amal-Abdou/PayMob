@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.PayMob.Models.PaymentInfoModel
+
+<div class="title">
+    <strong>@T("Payment.SelectPayMobPaymentType")</strong>
+</div>
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            Card Pay <input asp-for="PayMobPaymentType" type="radio" name="PayMobPaymentType" value="cardpay" />
+            Kiosk <input asp-for="PayMobPaymentType" type="radio" name="PayMobPaymentType" value="kiosk" />
+            Wallet <input asp-for="PayMobPaymentType" type="radio" name="PayMobPaymentType" value="wallet" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Your Wallet Phone Number <input asp-for="PayMobPaymentNumber" type="text" name="PayMobPaymentNumber" />
+        </td>
+    </tr>
+</table>
